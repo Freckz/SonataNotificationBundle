@@ -30,7 +30,7 @@ Supervisor is a client/server system that allows its users to monitor and contro
 
 If you are deploying with capistrano, you can restart the supervisor process with a custom task::
 
-    after "deploy:symlink" do
+    after "deploy:create_symlink" do
         run "supervisorctl -u user -p password restart sonata_production_sonata_notification"
     end
     
